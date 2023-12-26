@@ -72,7 +72,7 @@ function App() {
       body: JSON.stringify(updatedTask),
     });
 
-    const data = await res.json();
+    // const data = await res.json();
 
     setTasks(
       tasks.map(task =>
