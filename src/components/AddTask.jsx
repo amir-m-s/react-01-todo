@@ -27,8 +27,9 @@ const AddTask = props => {
       onSubmit={onSubmit}
     >
       <div className="form-control">
-        <label>Task</label>
+        <label htmlFor="task">Task</label>
         <input
+          id="task"
           type="text"
           placeholder="Add Task"
           value={text}
@@ -36,8 +37,9 @@ const AddTask = props => {
         />
       </div>
       <div className="form-control">
-        <label>Day & time</label>
+        <label htmlFor="task-date">Day & time</label>
         <input
+          id="task-date"
           type="text"
           placeholder="Add Day & Time"
           value={day}
