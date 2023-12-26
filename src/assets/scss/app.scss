@@ -77,6 +77,13 @@ body {
     }
   }
 
+  .show-form {
+    height: 23rem !important;
+    padding: 1em 3em !important;
+    pointer-events: all !important;
+    opacity: 1 !important;
+  }
+
   .form-reminder {
     display: flex;
     justify-content: center;
