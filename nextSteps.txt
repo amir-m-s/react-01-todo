@@ -1,0 +1,2 @@
+- Deploy app on a server
+- Improve show-form animation

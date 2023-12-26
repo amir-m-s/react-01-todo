@@ -1,0 +1,74 @@
+@use "conf";
+
+@function set-color($bg-clr) {
+  @if (lightness($bg-clr) > 70) {
+    @return #222;
+  } @else {
+    @return #fff;
+  }
+}
+@mixin interactive-element($bg-clr) {
+  background-color: $bg-clr;
+  color: set-color($bg-clr);
+  transition: 150ms ease-in-out;
+
+  &:hover {
+    background-color: lighten($bg-clr, 10);
+  }
+}
+
+// Container
+
+%container {
+  width: 85%;
+  margin-block: 0;
+  margin-inline: auto;
+  padding: 0;
+}
+
+// General container
+.container {
+  @extend %container;
+
+  &-wide {
+    @extend %container;
+    width: 95%;
+  }
+}
+
+// Buttons
+
+%btn {
+  cursor: pointer;
+  padding: 0.5em;
+  font-size: 1em;
+  border-radius: 0.5em;
+  display: grid;
+  place-content: center;
+}
+
+.btn {
+  @extend %btn;
+  @include interactive-element(#222);
+
+  &-primary {
+    @include interactive-element(conf.$clr-primary);
+  }
+
+  &-error {
+    @include interactive-element(conf.$clr-accent);
+  }
+}
+
+// Reminder
+.reminder {
+  border-left: 5px solid conf.$clr-accent !important;
+}
+
+// Show and hide add form
+.show-form {
+  height: 22rem !important;
+  padding: 1em 3em !important;
+  pointer-events: all !important;
+  opacity: 1 !important;
+}

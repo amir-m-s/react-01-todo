@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+// Vars
+$clr-primary: #3498db;
+$clr-text: #2c3e50;
+$clr-accent: #e74c3c;
+
+$clr-task-completed: #2ecc71;
+$clr-task-overdue: #e67e22;
+
+$clr-category-label: #9b59b6;
+
+$clr-border: #bdc3c7;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+*:focus-visible {
+  outline: 2px solid $clr-category-label;
+  outline-offset: 0.2em;
+}
+
+body {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+  font-size: 0.9em;
+  transition: all 0.3s ease-in-out;
+}
+
+h1 {
+  font-size: 2rem;
+}
